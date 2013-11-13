@@ -6,7 +6,7 @@
           $tooltip;
 
       var options = $.extend({
-        appearSpeed: 400
+        animationDuration: 200
       }, options || {});
 
       var buildTooltipStub = function(){
@@ -23,7 +23,7 @@
       }
 
       obj.dismissTooltip = function(){
-        $tooltip.hide(options.appearSpeed);
+        $tooltip.fadeOut(options.animationDuration);
       }
 
       var init = function(){
