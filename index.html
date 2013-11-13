@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="assets/tooltipper.js"></script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    var tt;
+    $(function(){
+      $('body').tooltipper();
+      tooltipper = $('body').data('tooltipper');
+      tooltipper.insertTooltip($('#tooltip2 .tooltipper'), '<h1 class="headline">Hooha</h1><p>foobah</p>');
+    });
+  </script>
+</head>
+<body>
+  <div id="tooltip1" class="tooltip-container">
+    <p>Lorem ipsum dolor <span class="tooltipper">sit amet</span>, consectetur adipisicing elit. Facilis, assumenda, fuga nobis praesentium similique quas obcaecati vel quibusdam! Optio esse ab natus dolores iure veritatis blanditiis libero placeat possimus commodi!</p>
+  </div>
+
+  <div id="tooltip2" class="tooltip-container">
+    <p>Lorem ipsum dolor <span class="tooltipper">sit amet</span>, consectetur adipisicing elit. Facilis, assumenda, fuga nobis praesentium similique quas obcaecati vel quibusdam! Optio esse ab natus dolores iure veritatis blanditiis libero placeat possimus commodi!</p>
+  </div>
+
+  <div id="tooltip3" class="tooltip-container">
+    <p>Lorem ipsum dolor <span class="tooltipper">sit amet</span>, consectetur adipisicing elit. Facilis, assumenda, fuga nobis praesentium similique quas obcaecati vel quibusdam! Optio esse ab natus dolores iure veritatis blanditiis libero placeat possimus commodi!</p>
+  </div>
+</body>
+</html>

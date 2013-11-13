@@ -1,0 +1,110 @@
+@import 'reset.css';
+@import 'bourbon/bourbon';
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body{
+  padding: 100px 0 0;
+}
+
+.tooltip-container{
+  margin-bottom: 200px;
+}
+
+#tooltip1{
+  margin-top: 100px;
+}
+
+.tooltipper{
+  position: relative;
+}
+
+#tooltip-bubble{
+  display: block;
+  position: absolute;
+  bottom: 25px;
+  padding: 5px;
+  width: 200px;
+  @include animation(fadeInUp 1s);
+  @include linear-gradient( #fff 0%, #eee 100%);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #666;
+  text-shadow: 0 1px #fff;
+  &::after{
+    position: absolute;
+    content: '';
+    @include triangle(12px, #ddd, down);
+    position: absolute;
+    bottom: -12px;
+  }
+
+  .close-btn{
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    color: #ccc;
+    text-shadow: 0 1px #fff;
+    &:hover{
+      cursor: pointer;
+      color: #666;
+    }
+  }
+
+  .headline{
+    font-size: 1.2;
+    font-weight: bold;
+  }
+  .content{
+    *{
+      margin: 0;
+    }
+  }
+}
