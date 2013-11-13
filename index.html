@@ -9,7 +9,11 @@
     $(function(){
       $('body').tooltipper();
       tooltipper = $('body').data('tooltipper');
-      tooltipper.insertTooltip($('#tooltip1 .anchor1'), '<img src="assets/brad.jpg" class="avatar" /><h1 class="headline">Brad Wilson</h1><p>Check out this awesome feature of BradsDeals.com</p>', 'bottom');
+      tooltipper.insertTooltip(
+        $('#tooltip1 .anchor1'),
+        '<img src="assets/brad.jpg" class="avatar" /><h1 class="headline">Brad Wilson</h1><p>Check out this awesome feature of BradsDeals.com</p>',
+        'bottom'
+      );
     });
   </script>
 </head>
