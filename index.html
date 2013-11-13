@@ -9,21 +9,13 @@
     $(function(){
       $('body').tooltipper();
       tooltipper = $('body').data('tooltipper');
-      tooltipper.insertTooltip($('#tooltip2 .tooltipper'), '<img src="assets/brad.jpg" class="avatar" /><h1 class="headline">Brad Wilson</h1><p>Check out this awesome feature of BradsDeals.com</p>');
+      tooltipper.insertTooltip($('#tooltip1 .anchor1'), '<img src="assets/brad.jpg" class="avatar" /><h1 class="headline">Brad Wilson</h1><p>Check out this awesome feature of BradsDeals.com</p>', 'bottom');
     });
   </script>
 </head>
 <body>
   <div id="tooltip1" class="tooltip-container">
-    <p>Lorem ipsum dolor <span class="tooltipper">sit amet</span>, consectetur adipisicing elit. Facilis, assumenda, fuga nobis praesentium similique quas obcaecati vel quibusdam! Optio esse ab natus dolores iure veritatis blanditiis libero placeat possimus commodi!</p>
-  </div>
-
-  <div id="tooltip2" class="tooltip-container">
-    <p>Lorem ipsum dolor <span class="tooltipper">sit amet</span>, consectetur adipisicing elit. Facilis, assumenda, fuga nobis praesentium similique quas obcaecati vel quibusdam! Optio esse ab natus dolores iure veritatis blanditiis libero placeat possimus commodi!</p>
-  </div>
-
-  <div id="tooltip3" class="tooltip-container">
-    <p>Lorem ipsum dolor <span class="tooltipper">sit amet</span>, consectetur adipisicing elit. Facilis, assumenda, fuga nobis praesentium similique quas obcaecati vel quibusdam! Optio esse ab natus dolores iure veritatis blanditiis libero placeat possimus commodi!</p>
+    <p>Lorem ipsum dolor, consectetur adipisicing elit. Facilis, assumenda, fuga nobis praesentium similique quas obcaecati  <span class="anchor1">sit amet</span> vel quibusdam! Optio esse ab natus <span class="anchor2">dolores iure</span> veritatis blanditiis libero placeat possimus commodi!</p>
   </div>
 </body>
 </html>

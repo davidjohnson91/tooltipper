@@ -45,7 +45,8 @@ body {
   margin-top: 100px; }
 
 .tooltipper {
-  position: relative; }
+  position: relative;
+  background: yellow; }
 
 #tooltip-bubble {
   display: block;
@@ -65,17 +66,58 @@ body {
   font-size: 12px;
   color: #666;
   text-shadow: 0 1px #fff; }
+  #tooltip-bubble.left {
+    bottom: auto;
+    left: -224px;
+    top: 0; }
+    #tooltip-bubble.left::after {
+      bottom: auto;
+      right: -12px;
+      top: 0;
+      height: 0;
+      width: 0;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 6px;
+      border-left-color: #dddddd; }
+  #tooltip-bubble.right {
+    bottom: auto;
+    right: -224px;
+    top: 0; }
+    #tooltip-bubble.right::after {
+      bottom: auto;
+      left: -12px;
+      top: 0;
+      height: 0;
+      width: 0;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 6px;
+      border-right-color: #dddddd; }
+  #tooltip-bubble.bottom {
+    top: 24px;
+    bottom: auto;
+    left: 0; }
+    #tooltip-bubble.bottom::after {
+      position: absolute;
+      top: -12px;
+      content: '';
+      height: 0;
+      width: 0;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 6px;
+      border-bottom-color: #dddddd; }
   #tooltip-bubble::after {
     position: absolute;
+    bottom: -12px;
     content: '';
     height: 0;
     width: 0;
     border-color: transparent;
     border-style: solid;
     border-width: 6px;
-    border-top-color: #dddddd;
-    position: absolute;
-    bottom: -12px; }
+    border-top-color: #dddddd; }
   #tooltip-bubble .close-btn {
     position: absolute;
     right: 5px;

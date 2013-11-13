@@ -15,10 +15,14 @@
         }
       }
 
-      obj.insertTooltip = function($node, content){
-        $tooltip.content.html(content);
+      obj.insertTooltip = function($node, content, direction){
+        $tooltip.removeClass('top bottom left right')
+          .addClass(direction)
+          .content.html(content);
+
         $node.addClass('tooltipper')
           .append($tooltip);
+
         $tooltip.show();
       }
 

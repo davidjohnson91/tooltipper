@@ -1,6 +1,8 @@
 @import 'reset.css';
 @import 'bourbon/bourbon';
 
+$tooltip-width: 200px;
+
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -63,6 +65,7 @@ body{
 
 .tooltipper{
   position: relative;
+  background: yellow;
 }
 
 #tooltip-bubble{
@@ -70,7 +73,7 @@ body{
   position: absolute;
   bottom: 25px;
   padding: 5px;
-  width: 200px;
+  width: $tooltip-width;
   @include animation(fadeInUp 1s);
   @include linear-gradient( #fff 0%, #eee 100%);
   border: 1px solid #ddd;
@@ -78,12 +81,44 @@ body{
   font-size: 12px;
   color: #666;
   text-shadow: 0 1px #fff;
+  &.left{
+    bottom: auto;
+    left: -($tooltip-width + 24px);
+    top: 0;
+    &::after{
+      bottom: auto;
+      right: -12px;
+      top: 0;
+      @include triangle(12px, #ddd, right);
+    }
+  }
+  &.right{
+    bottom: auto;
+    right: -($tooltip-width + 24px);
+    top: 0;
+    &::after{
+      bottom: auto;
+      left: -12px;
+      top: 0;
+      @include triangle(12px, #ddd, left);
+    }
+  }
+  &.bottom{
+    top: 24px; 
+    bottom: auto;
+    left: 0;
+    &::after{
+      position: absolute;
+      top: -12px;
+      content: '';
+      @include triangle(12px, #ddd, up);
+    }
+  }
   &::after{
     position: absolute;
+    bottom: -12px;
     content: '';
     @include triangle(12px, #ddd, down);
-    position: absolute;
-    bottom: -12px;
   }
 
   .close-btn{
