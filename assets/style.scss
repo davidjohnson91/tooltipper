@@ -14,6 +14,39 @@ $tooltip-width: 200px;
   }
 }
 
+@include keyframes(fadeInDown){
+  from{
+    opacity: 0;
+    @include transform(translateY(-20px));
+  }
+  to {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}
+
+@include keyframes(fadeInLeft){
+  from{
+    opacity: 0;
+    @include transform(translateX(-20px));
+  }
+  to {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}
+
+@include keyframes(fadeInRight){
+  from{
+    opacity: 0;
+    @include transform(translateX(20px));
+  }
+  to {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}
+
 body{
   padding: 100px 0 0;
 }
@@ -45,6 +78,7 @@ body{
   color: #666;
   text-shadow: 0 1px #fff;
   &.left{
+    @include animation(fadeInRight 1s);
     bottom: auto;
     left: -($tooltip-width + 24px);
     top: 0;
@@ -56,6 +90,7 @@ body{
     }
   }
   &.right{
+    @include animation(fadeInLeft 1s);
     bottom: auto;
     right: -($tooltip-width + 24px);
     top: 0;
@@ -67,6 +102,7 @@ body{
     }
   }
   &.bottom{
+    @include animation(fadeInDown 1s);
     top: 24px; 
     bottom: auto;
     left: 0;
