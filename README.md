@@ -1,5 +1,7 @@
 # Super-simple tooltips for everyday use.
 
+![alt tag](https://raw.github.com/davidjohnson91/tooltipper/master/assets/Tip-from-Brad.gif)
+
 1.   Instantiate the plugin
 
         $('body').tooltipper();
